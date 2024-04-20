@@ -1,0 +1,7 @@
+{
+  "extends": ["next", "prettier"],
+  "plugins": ["@tanstack/query"],
+  "rules": {
+    "no-unused-vars": "error"
+  }
+}
