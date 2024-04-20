@@ -23,6 +23,7 @@ export default function useSetCountryOnClick(mapRef: MutableRefObject<Map | null
         })
         .catch(() => {
           popup.setContent('Error: No data found for this point');
+          setSelectedCountryCode(null);
         });
     });
   }, [mapRef, setSelectedCountryCode]);

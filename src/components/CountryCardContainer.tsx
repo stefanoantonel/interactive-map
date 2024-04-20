@@ -19,6 +19,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
+  border-radius: 5px;
+  border: 1px solid;
 `;
 
 const LoaderContainer = styled.div`
