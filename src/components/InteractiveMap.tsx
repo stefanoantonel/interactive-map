@@ -5,6 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import { useRef } from 'react';
 
 import useMap from '@/hooks/useMap';
+import useCountryHighlight from '@/hooks/useCountryHighlight';
 import useSetCountryOnClick from '@/hooks/useSetCountryOnClick';
 
 const Container = styled.div`
@@ -23,6 +24,9 @@ export default function InteractiveMap() {
 
   // set country code on map click
   useSetCountryOnClick(mapRef);
+
+  // will highlight country border on click
+  useCountryHighlight(mapRef);
 
   return <Container ref={mapContainerRef}></Container>;
 }
