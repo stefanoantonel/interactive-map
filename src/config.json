@@ -1,3 +1,4 @@
 {
-  "graphQLEndpoint": "https://countries.trevorblades.com"
+  "graphQLEndpoint": "https://countries.trevorblades.com",
+  "reverseGeolocEndpoint": "http://api.geonames.org/countryCode?lat=<LAT>&lng=<LNG>&username=m12semf2"
 }

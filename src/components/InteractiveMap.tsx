@@ -5,6 +5,7 @@ import 'leaflet/dist/leaflet.css';
 import { useRef } from 'react';
 
 import useMap from '@/hooks/useMap';
+import useSetCountryOnClick from '@/hooks/useSetCountryOnClick';
 
 const Container = styled.div`
   z-index: 1;
@@ -18,7 +19,10 @@ const Container = styled.div`
 
 export default function InteractiveMap() {
   const mapContainerRef = useRef(null);
-  useMap(mapContainerRef);
+  const mapRef = useMap(mapContainerRef);
+
+  // set country code on map click
+  useSetCountryOnClick(mapRef);
 
   return <Container ref={mapContainerRef}></Container>;
 }
