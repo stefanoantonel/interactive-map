@@ -9,9 +9,5 @@ export function getCountryCodeISO(countryCode: string, signal?: AbortSignal) {
     .then((data) => {
       const isoName = data.match('<isoAlpha3>(.+)</isoAlpha3>')?.[1];
       return isoName || null;
-    })
-    .catch((e) => {
-      if (e?.message === 'signal is aborted without reason') return;
-      throw e;
     });
 }

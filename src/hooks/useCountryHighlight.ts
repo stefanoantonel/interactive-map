@@ -16,10 +16,15 @@ export default function useCountryHighlight(mapRef: MutableRefObject<Map | null>
     if (!selectedCountryCode) return;
 
     const controller = new AbortController();
-    getCountryCodeISO(selectedCountryCode, controller.signal).then((iso) => {
-      if (!iso) throw new Error(`No ISO country code found for ${selectedCountryCode}`);
-      setCountryCodeISO(iso);
-    });
+    getCountryCodeISO(selectedCountryCode, controller.signal)
+      .then((iso) => {
+        if (!iso) throw new Error(`No ISO country code found for ${selectedCountryCode}`);
+        setCountryCodeISO(iso);
+      })
+      .catch((e) => {
+        if (e?.message === 'signal is aborted without reason') return;
+        throw e;
+      });
 
     return () => {
       controller.abort();
