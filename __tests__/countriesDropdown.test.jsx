@@ -4,7 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { useQuery } from '@apollo/client';
 
 import CountriesDropdown from '@/components/CountriesDropdown';
-import countriesMock from './mock/countries';
+import countriesMock from './mock/countries.json';
 
 jest.mock('@apollo/client', () => ({
   ...jest.requireActual('@apollo/client'),

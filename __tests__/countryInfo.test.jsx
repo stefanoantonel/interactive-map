@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { useQuery } from '@apollo/client';
 
 import CountryInfo, { Item } from '@/components/CountryInfo';
-import { countryInfoMock } from './mock/mockCountryInfo';
+import countryInfoMock from './mock/mockCountryInfo.json';
 
 jest.mock('@apollo/client', () => ({
   ...jest.requireActual('@apollo/client'),
@@ -35,7 +35,7 @@ describe('CountryInfo', () => {
       error: null,
     });
     render(<CountryInfo />);
-    screen.getByText('Data not available');
+    screen.getByText('Select a country to display information');
   });
   it('renders info data', () => {
     useQuery.mockReturnValue({
