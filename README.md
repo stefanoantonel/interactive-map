@@ -35,8 +35,10 @@ Open [http://localhost:3003](http://localhost:3003) with your browser to see the
 - https://react-select.com autocomplete dropdown for country selection
 
 ## Sequence Diagram
+
 To understand a bit better the interaction with the libraries and different APIs see diagram.
 
+<!-- prettier-ignore -->
 ```mermaid
 sequenceDiagram
   actor U as User
