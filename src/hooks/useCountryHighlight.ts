@@ -60,5 +60,6 @@ export default function useCountryHighlight(mapRef: MutableRefObject<Map | null>
 
     mapRef.current.addLayer(country);
     mapRef.current.fitBounds(country.getBounds());
+    window.scrollTo(0, 0);
   }, [mapRef, geoJsonData, countryCodeISO]);
 }
