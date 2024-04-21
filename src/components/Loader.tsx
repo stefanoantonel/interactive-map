@@ -50,5 +50,5 @@ const Container = styled.div`
 `;
 
 export default function Loader() {
-  return <Container></Container>;
+  return <Container data-testid="loader-component"></Container>;
 }

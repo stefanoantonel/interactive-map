@@ -32,6 +32,8 @@ export default function CountryInfo({ countryCode }: Props) {
 
   if (loading) return <div>Loading country info...</div>;
 
+  if (!data?.country) return <div>Data not available</div>;
+
   const countryData: CountryInfoType = data.country;
 
   const languagesValue = countryData.languages.reduce((acc, lang) => {
@@ -57,7 +59,7 @@ type ItemProps = {
   value: string | number;
 };
 
-function Item({ name, value }: ItemProps) {
+export function Item({ name, value }: ItemProps) {
   return (
     <div>
       <strong>{name}: </strong>
