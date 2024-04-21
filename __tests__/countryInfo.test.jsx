@@ -35,7 +35,7 @@ describe('CountryInfo', () => {
       error: null,
     });
     render(<CountryInfo />);
-    screen.getByText('Data not available');
+    screen.getByText('Select a country to display information');
   });
   it('renders info data', () => {
     useQuery.mockReturnValue({

@@ -1,14 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { useQuery } from '@apollo/client';
 
 import InteractiveMap from '@/components/InteractiveMap';
-import { countryInfoMock } from './mock/mockCountryInfo';
-import { beforeEach } from 'node:test';
 
-// jest.mock('@apollo/client', () => ({
-//   ...jest.requireActual('@apollo/client'),
-//   useQuery: jest.fn(),
-// }));
+jest.mock('@/hooks/useCountryHighlight', () => jest.fn());
+jest.mock('@/hooks/useSetCountryOnClick', () => jest.fn());
 
 describe('InteractiveMap', () => {
   it('renders copyright', () => {
