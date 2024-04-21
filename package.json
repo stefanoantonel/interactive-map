@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
-    "prettier:check": "cat next.config.js && prettier --check . --log-level warn",
+    "prettier:check": "ls -al && prettier --check . --log-level warn",
     "prettier:write": "prettier --write . --log-level warn",
     "test": "jest",
     "test:watch": "jest --watch"
