@@ -32,6 +32,17 @@ export default function useCountryHighlight(mapRef: MutableRefObject<Map | null>
   }, [selectedCountryCode]);
 
   useEffect(() => {
+    // remove highlight when not country is selected
+    if (!mapRef.current || selectedCountryCode) return;
+
+    if (previousCountryLayer.current) {
+      mapRef.current.removeLayer(previousCountryLayer.current);
+    }
+    previousCountryLayer.current = null;
+    setCountryCodeISO(null);
+  }, [mapRef, selectedCountryCode]);
+
+  useEffect(() => {
     if (!mapRef.current || !geoJsonData || !countryCodeISO) return;
 
     const countryGeoJson = geoJsonData.features.find((f) => f.id === countryCodeISO);

@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client';
 import { useAtom } from 'jotai';
 import { useEffect, useMemo, useRef } from 'react';
 import Select from 'react-select';
+import styled from 'styled-components';
 
 import { LIST_COUNTRIES } from '@/queries/countries';
 import { selectedCountryCodeAtom } from '@/state/country';
@@ -49,15 +50,35 @@ export default function CountriesDropdown() {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <Select
-      ref={selectRef}
-      isLoading={loading}
-      isDisabled={loading}
-      isClearable={true}
-      isSearchable={true}
-      options={options}
-      placeholder={'Search country'}
-      onChange={onChange}
-    />
+    <Container>
+      <Select
+        ref={selectRef}
+        isLoading={loading}
+        isDisabled={loading}
+        isClearable={true}
+        isSearchable={true}
+        options={options}
+        placeholder={'Search country'}
+        onChange={onChange}
+      />
+      <ResetBtn title="Reset" onClick={() => setSelectedCountryCode(null)}>
+        ⟳
+      </ResetBtn>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: auto 30px;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+`;
+
+const ResetBtn = styled.button`
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: black;
+`;

@@ -20,19 +20,20 @@ const CountryTitle = styled.div`
 `;
 
 type Props = {
-  countryCode: string;
+  countryCode: string | null;
 };
 
 export default function CountryInfo({ countryCode }: Props) {
   const { data, loading, error } = useQuery(COUNTRY_INFO, {
     variables: { countryCode: countryCode },
+    skip: !countryCode,
   });
 
-  if (error) return <div>Error: {error.message}</div>;
+  if (error) return <ResultText>Error: {error.message}</ResultText>;
 
-  if (loading) return <div>Loading country info...</div>;
+  if (loading) return <ResultText>Loading country info...</ResultText>;
 
-  if (!data?.country) return <div>Data not available</div>;
+  if (!data?.country) return <ResultText>Select a country to display information</ResultText>;
 
   const countryData: CountryInfoType = data.country;
 
@@ -67,3 +68,10 @@ export function Item({ name, value }: ItemProps) {
     </div>
   );
 }
+
+const ResultText = styled.div`
+  display: flex;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+`;

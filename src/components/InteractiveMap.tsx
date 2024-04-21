@@ -11,7 +11,8 @@ import useSetCountryOnClick from '@/hooks/useSetCountryOnClick';
 const Container = styled.div`
   z-index: 1;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
+  overflow: hidden;
   &.leaflet-grab {
     /* to hint the user that they can click on the map */
     cursor: pointer;

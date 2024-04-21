@@ -54,7 +54,7 @@ export default function CountryCardContainer() {
     <Container>
       <ApolloProvider client={client}>
         <CountriesDropdown />
-        {selectedCountryCode && <CountryInfo countryCode={selectedCountryCode} />}
+        <CountryInfo countryCode={selectedCountryCode} />
       </ApolloProvider>
     </Container>
   );
