@@ -1,6 +1,6 @@
 {
   "graphQLEndpoint": "https://countries.trevorblades.com",
-  "reverseGeolocEndpoint": "http://api.geonames.org/countryCode?lat=<LAT>&lng=<LNG>&username=m12semf2",
+  "reverseGeolocEndpoint": "https://secure.geonames.org/countryCode?lat=<LAT>&lng=<LNG>&username=m12semf2",
   "countriesBordersEndpoint": "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json",
-  "countryNameEndpoint": "http://api.geonames.org/countryInfo?&country=<COUNTRY_CODE>&username=m12semf2"
+  "countryNameEndpoint": "https://secure.geonames.org/countryInfo?&country=<COUNTRY_CODE>&username=m12semf2"
 }
