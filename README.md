@@ -2,10 +2,12 @@
 
 Interactive map using GraphQL data from https://github.com/trevorblades/countries
 
-### [Demo](https://stefanoantonel.github.io/interactive-map/)
+### Checkout [Demo](https://stefanoantonel.github.io/interactive-map/) 🗺
 
-![Preview map in desktop.](public/desktop.png)
-![Preview map in mobile.](public/mobile.png)
+<p>
+  <img src="https://raw.githubusercontent.com/stefanoantonel/interactive-map/images/public/desktop.png" alt="Preview map in desktop." width="700">
+  <img src="https://raw.githubusercontent.com/stefanoantonel/interactive-map/images/public/mobile.png" alt="Preview map in mobile" width="213">
+</p>
 
 ## Getting Started
 
