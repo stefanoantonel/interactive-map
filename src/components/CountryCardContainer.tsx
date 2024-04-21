@@ -21,6 +21,15 @@ const Container = styled.div`
   width: 300px;
   border-radius: 5px;
   border: 1px solid;
+
+  @media (max-width: 768px) {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    height: 30vh;
+  }
 `;
 
 const LoaderContainer = styled.div`

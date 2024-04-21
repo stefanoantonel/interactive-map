@@ -16,6 +16,10 @@ const Container = styled.div`
     /* to hint the user that they can click on the map */
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    height: 70vh;
+  }
 `;
 
 export default function InteractiveMap() {
