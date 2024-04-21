@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { useQuery } from '@apollo/client';
 
 import CountryInfo, { Item } from '@/components/CountryInfo';
-import { countryInfoMock } from './mock/mockCountryInfo';
+import countryInfoMock from './mock/mockCountryInfo.json';
 
 jest.mock('@apollo/client', () => ({
   ...jest.requireActual('@apollo/client'),
