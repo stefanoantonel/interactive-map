@@ -5,8 +5,8 @@ Interactive map using GraphQL data from https://github.com/trevorblades/countrie
 ### Checkout [Demo](https://stefanoantonel.github.io/interactive-map/) 🗺
 
 <p>
-  <img src="https://raw.githubusercontent.com/stefanoantonel/interactive-map/images/public/desktop.png" alt="Preview map in desktop." width="600">
-  <img src="https://raw.githubusercontent.com/stefanoantonel/interactive-map/images/public/mobile.png" alt="Preview map in mobile" width="183">
+  <img src="https://raw.githubusercontent.com/stefanoantonel/interactive-map/main/public/desktop.png" alt="Preview map in desktop." width="600">
+  <img src="https://raw.githubusercontent.com/stefanoantonel/interactive-map/main/public/mobile.png" alt="Preview map in mobile" width="183">
 </p>
 
 ## Getting Started
