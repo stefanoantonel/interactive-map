@@ -8,21 +8,6 @@ import useMap from '@/hooks/useMap';
 import useCountryHighlight from '@/hooks/useCountryHighlight';
 import useSetCountryOnClick from '@/hooks/useSetCountryOnClick';
 
-const Container = styled.div`
-  z-index: 1;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  &.leaflet-grab {
-    /* to hint the user that they can click on the map */
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    height: 70vh;
-  }
-`;
-
 export default function InteractiveMap() {
   const mapContainerRef = useRef(null);
   const mapRef = useMap(mapContainerRef);
@@ -35,3 +20,18 @@ export default function InteractiveMap() {
 
   return <Container ref={mapContainerRef}></Container>;
 }
+
+const Container = styled.div`
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  &.leaflet-grab {
+    /* to hint the user that they can click on the map */
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    height: 55vh;
+  }
+`;

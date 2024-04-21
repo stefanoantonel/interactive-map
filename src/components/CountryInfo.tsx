@@ -4,21 +4,6 @@ import { useQuery } from '@apollo/client';
 import { COUNTRY_INFO } from '@/queries/countries';
 import { CountryInfoType } from '@/types/graphql';
 
-const Container = styled.div`
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  padding: 10px;
-`;
-
-const CountryTitle = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 8px 0;
-  color: #aad3df;
-  text-align: center;
-`;
-
 type Props = {
   countryCode: string | null;
 };
@@ -69,9 +54,24 @@ export function Item({ name, value }: ItemProps) {
   );
 }
 
+const Container = styled.div`
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 10px;
+`;
+
+const CountryTitle = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 8px 0;
+  color: #aad3df;
+  text-align: center;
+`;
+
 const ResultText = styled.div`
   display: flex;
-  height: 70px;
+  height: 40vh;
   justify-content: center;
   align-items: center;
 `;
